@@ -115,3 +115,26 @@ dlg.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') step(1);
   if (e.key === 'ArrowLeft') step(-1);
 });
+
+// Galerías de marketing y diseño
+const M = '../marketing/';
+galleries.jhenscar = {
+  title: 'Importaciones Jhens Car',
+  items: [
+    [M + 'jhenscar-logo.webp', 'Logo de la marca, diseñado por mí'],
+    [M + 'jhenscar-banner.webp', 'Banner para redes: “Listos para la aventura”'],
+    [M + 'jhenscar-antivuelco.webp', 'Fotografía y edición de producto: antivuelco Hamer Black'],
+    [M + 'jhenscar-frontier.webp', 'Fotografía de instalación: equipamiento Nissan Frontier'],
+    [M + 'jhenscar-ofertas.webp', 'Fotomontaje para campaña de ofertas'],
+    [M + 'jhenscar-cupula-hilux.webp', 'Ficha de producto: cúpula para Toyota Hilux'],
+  ],
+};
+galleries.carryboy = {
+  title: 'Carryboy Perú',
+  items: [
+    [M + 'carryboy-mazda-cupula.webp', 'Fotografía y diseño: cúpula Carryboy para Mazda'],
+    [M + 'carryboy-series7.webp', 'Ficha de producto: cúpula Series 7'],
+    [M + 'carryboy-s560.webp', 'Fotomontaje: cúpula CMND-S560'],
+    [M + 'carryboy-mazda-bt50.webp', 'Pieza para redes: cúpula Mazda BT-50'],
+  ],
+};
