@@ -262,3 +262,15 @@ ul { margin: 0; padding: 0; list-style: none; }
 .videos__list { display: flex; flex-wrap: wrap; gap: .5rem; }
 .videos__list a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 1rem; border: 1px solid var(--border); border-radius: 999px; text-decoration: none; font-size: .9rem; transition: border-color .2s ease; }
 .videos__list a:hover { border-color: var(--accent-text); color: var(--accent-text); }
+.gallery__video { max-height: calc(100dvh - 230px); max-width: 100%; border-radius: 10px; border: 1px solid var(--border); background: #000; }
+.gallery__stage [hidden] { display: none; }
+.card--feature { margin-bottom: 1rem; border-color: rgba(59, 102, 240, .45); }
+.card--feature .kicker { margin-bottom: .35rem; }
+.card--feature h3 { font-size: 1.4rem; }
+.card--feature .card__media { aspect-ratio: 16 / 9; }
+.card--feature .card__media img { object-position: center; }
+@media (min-width: 960px) {
+  .card--feature { flex-direction: row; }
+  .card--feature .card__media { flex: 0 0 55%; aspect-ratio: auto; min-height: 340px; }
+  .card--feature .card__body { padding: 2rem; justify-content: center; }
+}

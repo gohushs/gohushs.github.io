@@ -87,10 +87,28 @@ const gNext = dlg.querySelector('[data-next]');
 let current = null;
 let index = 0;
 
+const gVid = document.createElement('video');
+gVid.controls = true;
+gVid.playsInline = true;
+gVid.preload = 'metadata';
+gVid.className = 'gallery__video';
+gImg.after(gVid);
+
 const render = () => {
   const [file, caption] = current.items[index];
-  gImg.src = P + file;
-  gImg.alt = caption;
+  const isVideo = file.endsWith('.mp4');
+  gImg.hidden = isVideo;
+  gVid.hidden = !isVideo;
+  if (isVideo) {
+    gVid.poster = P + file.replace('.mp4', '-poster.webp');
+    gVid.src = P + file;
+    gVid.setAttribute('aria-label', caption);
+  } else {
+    gVid.pause();
+    gVid.removeAttribute('src');
+    gImg.src = P + file;
+    gImg.alt = caption;
+  }
   gCap.textContent = caption;
   gCount.textContent = `${index + 1} / ${current.items.length}`;
   const multi = current.items.length > 1;
@@ -110,6 +128,7 @@ document.querySelectorAll('[data-gallery]').forEach((btn) => {
 gPrev.addEventListener('click', () => step(-1));
 gNext.addEventListener('click', () => step(1));
 dlg.querySelector('[data-close]').addEventListener('click', () => dlg.close());
+dlg.addEventListener('close', () => gVid.pause());
 dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
 dlg.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') step(1);
@@ -136,5 +155,20 @@ galleries.carryboy = {
     [M + 'carryboy-series7.webp', 'Ficha de producto: cúpula Series 7'],
     [M + 'carryboy-s560.webp', 'Fotomontaje: cúpula CMND-S560'],
     [M + 'carryboy-mazda-bt50.webp', 'Pieza para redes: cúpula Mazda BT-50'],
+  ],
+};
+galleries.bisonmkt = {
+  title: 'BISON FAMA · Marca y marketing',
+  items: [
+    [M + 'bison-logo.webp', 'Logo de BISON FAMA, diseñado por mí'],
+    [M + 'bison-intro.mp4', 'Intro animada del logo'],
+    [M + 'bison-portada.webp', 'Portada para redes sociales'],
+    [M + 'bison-banner-vertical.webp', 'Banner vertical impreso para la tienda'],
+    [M + 'bison-antivuelco-black.webp', 'Fotomontaje: antivuelco Hamer Black'],
+    [M + 'bison-maxus-tienda.webp', 'Fotografía en tienda: antivuelco Hamer en Maxus'],
+    [M + 'bison-maxus-instalado.webp', 'Fotografía de instalación: Maxus con antivuelco Hamer'],
+    [M + 'bison-antivuelco-led.webp', 'Pieza de producto: antivuelco Hamer con LED'],
+    [M + 'bison-antivuelco-parrilla.webp', 'Pieza de producto: antivuelco Hamer con parrilla'],
+    [M + 'bison-jac.webp', 'Fotografía y edición: JAC con antivuelco y parrilla'],
   ],
 };
