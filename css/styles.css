@@ -6,7 +6,7 @@
   --border: #1F2C47;
   --text: #E8EEFC;
   --muted: #8E9AB8;
-  --accent: #4F7CFF;
+  --accent: #3B66F0;
   --accent-text: #8AA8FF;
   --accent-ink: #FFFFFF;
   --accent-soft: rgba(79, 124, 255, .14);
@@ -52,7 +52,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .btn:hover { transform: translateY(-2px); }
 .btn--primary { background: var(--accent); color: var(--accent-ink); }
-.btn--primary:hover { background: #6B91FF; }
+.btn--primary:hover { background: #2F5BE8; }
 .btn--ghost { background: transparent; color: var(--text); border-color: var(--border); }
 .btn--ghost:hover { border-color: var(--accent-text); }
 .btn--sm { min-height: 42px; padding: 0 1.1rem; font-size: .9rem; }
