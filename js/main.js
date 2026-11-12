@@ -140,7 +140,7 @@ const M = '../marketing/';
 galleries.jhenscar = {
   title: 'Importaciones Jhens Car',
   items: [
-    [M + 'jhenscar-logo.webp', 'Logo de la marca, diseñado por mí'],
+    [M + 'jhenscar-logo.webp', 'Logotipo de Jhens Car'],
     [M + 'jhenscar-banner.webp', 'Banner para redes: “Listos para la aventura”'],
     [M + 'jhenscar-antivuelco.webp', 'Fotografía y edición de producto: antivuelco Hamer Black'],
     [M + 'jhenscar-frontier.webp', 'Fotografía de instalación: equipamiento Nissan Frontier'],
@@ -160,9 +160,13 @@ galleries.carryboy = {
 galleries.bisonmkt = {
   title: 'BISON FAMA · Marca y marketing',
   items: [
-    [M + 'bison-logo.webp', 'Logo de BISON FAMA, diseñado por mí'],
-    [M + 'bison-intro.mp4', 'Intro animada del logo'],
-    [M + 'bison-portada.webp', 'Portada para redes sociales'],
+    [M + 'bison-logo.webp', 'Identidad visual de BISON FAMA: logotipo'],
+    [M + 'bison-intro.mp4', 'Intro animada de marca'],
+    [M + 'bison-portada.webp', 'Portada de marca para redes sociales'],
+    [M + 'bison-catalogo-p1.webp', 'Catálogo de accesorios 4x4: portada'],
+    [M + 'bison-catalogo-p2.webp', 'Catálogo: fichas de producto con modelo, compatibilidad y colores'],
+    [M + 'bison-catalogo-p3.webp', 'Catálogo: línea de defensas y bumpers'],
+    [M + 'bison-catalogo-p10.webp', 'Catálogo: línea de estribos'],
     [M + 'bison-banner-vertical.webp', 'Banner vertical impreso para la tienda'],
     [M + 'bison-antivuelco-black.webp', 'Fotomontaje: antivuelco Hamer Black'],
     [M + 'bison-maxus-tienda.webp', 'Fotografía en tienda: antivuelco Hamer en Maxus'],

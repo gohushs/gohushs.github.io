@@ -268,7 +268,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 .card--feature .kicker { margin-bottom: .35rem; }
 .card--feature h3 { font-size: 1.4rem; }
 .card--feature .card__media { aspect-ratio: 16 / 9; }
-.card--feature .card__media img { object-position: center; }
+.card--feature .card__media { background: #000; }
+.card--feature .card__media img { object-fit: contain; object-position: center; }
 @media (min-width: 960px) {
   .card--feature { flex-direction: row; }
   .card--feature .card__media { flex: 0 0 55%; aspect-ratio: auto; min-height: 340px; }
