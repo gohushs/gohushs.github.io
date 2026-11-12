@@ -163,7 +163,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .contact__item:hover { border-color: var(--accent-text); transform: translateY(-2px); }
 .contact__item svg { flex: none; width: 28px; height: 28px; color: var(--accent-text); }
 .contact__item span { display: flex; flex-direction: column; min-width: 0; }
-.contact__item small { color: var(--muted); font-size: .9rem; overflow-wrap: anywhere; }
+.contact__item small { color: var(--muted); font-size: .9rem; overflow-wrap: break-word; }
 
 /* Footer */
 .footer { padding: 28px 0 96px; color: var(--muted); font-size: .875rem; }
@@ -232,6 +232,24 @@ ul { margin: 0; padding: 0; list-style: none; }
   .cards { grid-template-columns: repeat(3, 1fr); }
   .skills { grid-template-columns: repeat(3, 1fr); }
   .skills__group:last-child { grid-column: auto; }
-  .contact__grid { grid-template-columns: repeat(4, 1fr); }
+  .contact__grid { grid-template-columns: repeat(5, 1fr); }
   .contact__item { flex-direction: column; align-items: flex-start; }
 }
+
+/* Marketing y diseño */
+.mkt { margin-top: 4rem; }
+.mkt__title { font-size: 1.4rem; margin-bottom: .5rem; }
+.mkt__lead { color: var(--muted); max-width: 60ch; margin-bottom: 1.5rem; }
+.mkt__grid { display: grid; gap: 1rem; }
+.mkt__item {
+  display: flex; flex-direction: column; gap: .5rem; padding: 1.4rem; text-decoration: none;
+  background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+  transition: border-color .2s ease, transform .2s ease;
+}
+.mkt__item:hover { border-color: var(--accent-text); transform: translateY(-3px); }
+.mkt__item strong { font: 700 1.15rem/1.25 var(--font-display); }
+.mkt__tag { align-self: flex-start; padding: .3rem .7rem; border-radius: 999px; background: var(--accent-soft); color: var(--accent-text); font-size: .75rem; font-weight: 600; }
+.mkt__desc { color: var(--muted); font-size: .95rem; }
+.mkt__link { margin-top: auto; padding-top: .5rem; color: var(--accent-text); font-weight: 600; font-size: .9rem; }
+.mkt__item--behance { background: linear-gradient(160deg, rgba(59, 102, 240, .18), var(--bg) 70%); }
+@media (min-width: 700px) { .mkt__grid { grid-template-columns: repeat(3, 1fr); } }
