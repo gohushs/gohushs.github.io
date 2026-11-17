@@ -32,7 +32,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/styles.css">
   <script>document.documentElement.classList.add('js');</script>
 
@@ -60,279 +60,285 @@
 <body>
   <a class="skip" href="#contenido">Saltar al contenido</a>
 
+  <!-- Menú tipo píldora -->
   <header class="nav" id="nav">
-    <div class="wrap nav__in">
-      <a class="logo" href="#inicio" aria-label="Gustavo Huamán, ir al inicio"><span class="logo__mark">GH</span><span class="logo__name">Gustavo Huamán <span class="logo__alias">· GOHUS</span></span></a>
-      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú">
+    <nav class="pill" aria-label="Principal">
+      <a class="pill__brand" href="#inicio" aria-label="GOHUS, ir al inicio">GOHUS</a>
+      <div class="pill__links" id="navMenu">
+        <a href="#inicio">Inicio</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#archivo">Archivo</a>
+        <a href="#sobre-mi">Sobre mí</a>
+      </div>
+      <a class="pill__cta" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+      <button class="pill__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú">
         <span></span><span></span>
       </button>
-      <nav class="nav__menu" id="navMenu" aria-label="Principal">
-        <a href="#inicio">Inicio</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#contacto" class="nav__cta">Contacto</a>
-      </nav>
-    </div>
+    </nav>
   </header>
 
   <main id="contenido">
     <!-- INICIO -->
     <section class="hero" id="inicio">
-      <div class="wrap hero__in">
-        <p class="eyebrow reveal"><span class="dot"></span> Lima, Perú · Disponible para nuevos proyectos</p>
-        <h1 class="hero__title reveal">Software y marketing que <span class="accent">impulsan las ventas</span> de tu negocio.</h1>
-        <p class="hero__lead reveal">Soy Gustavo Huamán, conocido como <strong>GOHUS</strong>, desarrollador de software con 9 años de trayectoria en ventas, marketing y diseño gráfico. Desarrollo aplicaciones web, sistemas de gestión y estrategias de marca orientadas a resultados medibles: más clientes, procesos más eficientes y una imagen profesional.</p>
-        <div class="hero__actions reveal">
-          <a class="btn btn--primary" href="#proyectos">Ver proyectos</a>
-          <a class="btn btn--ghost" href="#contacto">Contáctame</a>
+      <h1 class="hero__name" aria-label="Gustavo Huamán, GOHUS">
+        <span class="hero__giant" data-parallax="0.25" aria-hidden="true">GOHUS</span>
+      </h1>
+      <figure class="hero__photo">
+        <img class="hero__img hero__img--fade" src="assets/img/perfil.jpg" alt="Gustavo Huamán (GOHUS), desarrollador de software, marketing y DJ en Lima" width="800" height="800" fetchpriority="high">
+      </figure>
+      <div class="hero__intro">
+        <p class="hero__hello">Hola, soy</p>
+        <p class="hero__who">Gustavo Huamán</p>
+        <p class="hero__role">Desarrollo software y marcas que<br>impulsan las ventas de tu negocio.</p>
+      </div>
+      <ul class="hero__facts" aria-label="En resumen">
+        <li><strong>9</strong> años en ventas y marketing</li>
+        <li><strong>3</strong> sistemas en producción</li>
+        <li><strong>4</strong> marcas atendidas</li>
+      </ul>
+      <a class="hero__scroll" href="#manifiesto" aria-label="Bajar">↓</a>
+    </section>
+
+    <!-- MANIFIESTO -->
+    <section class="manifest" id="manifiesto">
+      <p class="manifest__text reveal">Combino <em>desarrollo de software</em>, <em>marketing</em> y <em>diseño</em> para crear experiencias digitales que se ven bien, funcionan mejor y venden más. Cada proyecto parte de un objetivo comercial y termina en algo que un equipo real usa todos los días.</p>
+      <a class="btn btn--primary reveal" href="#sobre-mi">Más sobre mí <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="services" id="servicios">
+      <h2 class="mega reveal">¿En qué te puedo<br>ayudar?</h2>
+      <ul class="services__deck">
+        <li class="svc svc--1 reveal">
+          <div class="svc__art"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="12" width="48" height="34" rx="5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M22 54h20M32 46v8M20 26l-5 5 5 5M44 26l5 5-5 5M35 23l-6 16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3 class="svc__label">Desarrollo web</h3>
+          <p class="svc__desc">Webs corporativas y tiendas rápidas, optimizadas para Google y pensadas para convertir visitas en clientes.</p>
+        </li>
+        <li class="svc svc--2 reveal">
+          <div class="svc__art"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="10" width="44" height="44" rx="8" fill="none" stroke="currentColor" stroke-width="3"/><path d="M10 24h44M24 24v30M32 34h14M32 42h10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div>
+          <h3 class="svc__label">Sistemas a medida</h3>
+          <p class="svc__desc">Inventario, ventas, asistencia y caja en una sola app instalable, con roles y reportes en tiempo real.</p>
+        </li>
+        <li class="svc svc--3 reveal">
+          <div class="svc__art"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 18c6 6 10 8 18 8s12-2 18-8M20 26l4 18 8 8 8-8 4-18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="12" r="4" fill="currentColor"/></svg></div>
+          <h3 class="svc__label">Branding y diseño</h3>
+          <p class="svc__desc">Logotipos, identidad visual, catálogos y material impreso que hacen que tu marca se recuerde.</p>
+        </li>
+        <li class="svc svc--4 reveal">
+          <div class="svc__art"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 40V26l30-12v38L10 40Zm30-2 12 4V18l-12 4M18 42l4 12h8l-3-11" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg></div>
+          <h3 class="svc__label">Marketing y contenido</h3>
+          <p class="svc__desc">Fotografía de producto, fotomontajes, campañas, videos y reels para redes que generan consultas.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="work" id="proyectos">
+      <div class="work__head">
+        <h2 class="mega reveal">Trabajo en<br>producción</h2>
+        <p class="work__lead reveal">Soluciones desarrolladas e implementadas para empresas en Lima, actualmente en operación.</p>
+      </div>
+
+      <article class="proj reveal">
+        <button class="proj__media" type="button" data-gallery="protection" aria-label="Ver capturas de Protection Police">
+          <img src="assets/img/proyectos/protection-police-web.webp" alt="Página web de Protection Police SAC" width="1280" height="800" loading="lazy" decoding="async">
+        </button>
+        <div class="proj__body">
+          <p class="proj__num">01 · Web + App</p>
+          <h3>Protection Police SAC</h3>
+          <p>Plataforma corporativa para una empresa de seguridad privada: sitio web orientado a la captación de clientes y sistema de control de asistencia con verificación por selfie y GPS. La gerencia supervisa la cobertura de cada puesto en tiempo real y reduce el riesgo de puestos descubiertos.</p>
+          <ul class="tags" aria-label="Tecnologías"><li>PHP 8</li><li>MariaDB</li><li>JavaScript</li><li>PWA</li><li>SEO</li></ul>
+          <div class="proj__actions">
+            <a class="btn btn--primary btn--sm" href="https://protectionpolice.com/" target="_blank" rel="noopener">Ver proyecto <span aria-hidden="true">↗</span></a>
+            <button class="btn btn--ghost btn--sm" type="button" data-gallery="protection">Ver la app</button>
+          </div>
         </div>
-        <ul class="hero__stats reveal" aria-label="En resumen">
-          <li><strong>9</strong><span>años en ventas y marketing</span></li>
-          <li><strong>3</strong><span>sistemas en producción</span></li>
-          <li><strong>4</strong><span>marcas atendidas</span></li>
+      </article>
+
+      <article class="proj proj--flip reveal">
+        <button class="proj__media" type="button" data-gallery="bisonsistema" aria-label="Ver capturas del sistema de inventario BISON">
+          <img src="assets/img/proyectos/bison-inventario-panel.webp" alt="Panel del sistema de almacén y ventas BISON FAMA" width="1280" height="800" loading="lazy" decoding="async">
+        </button>
+        <div class="proj__body">
+          <p class="proj__num">02 · Sistema interno</p>
+          <h3>Sistema de inventario BISON</h3>
+          <p>Sistema de gestión de almacén y ventas que centraliza inventario, ventas, proformas, clientes, envíos y cierre de caja. Incluye control de acceso por roles, alertas de reposición de stock y funciona como app instalable en el celular.</p>
+          <ul class="tags" aria-label="Tecnologías"><li>React</li><li>PHP</li><li>MySQL</li><li>PWA</li></ul>
+          <div class="proj__actions">
+            <button class="btn btn--primary btn--sm" type="button" data-gallery="bisonsistema">Ver proyecto</button>
+          </div>
+          <p class="proj__note">Sistema privado: las capturas usan datos ficticios.</p>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <button class="proj__media" type="button" data-gallery="bisonweb" aria-label="Ver capturas de la web de BISON FAMA">
+          <img src="assets/img/proyectos/bison-fama-web.webp" alt="Página web de BISON FAMA" width="1280" height="800" loading="lazy" decoding="async">
+        </button>
+        <div class="proj__body">
+          <p class="proj__num">03 · Marca + Web</p>
+          <h3>BISON FAMA · Tienda web</h3>
+          <p>Identidad de marca y canal de venta digital para una empresa de accesorios aftermarket para pickups y SUVs: tienda web organizada por categorías, posicionamiento en buscadores y atención comercial directa por WhatsApp.</p>
+          <ul class="tags" aria-label="Tecnologías"><li>HTML/CSS</li><li>JavaScript</li><li>SEO local</li><li>Branding</li></ul>
+          <div class="proj__actions">
+            <a class="btn btn--primary btn--sm" href="https://bisonfama.com/" target="_blank" rel="noopener">Ver proyecto <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ARCHIVO VISUAL -->
+    <section class="archive" id="archivo" aria-labelledby="archivoTitle">
+      <div class="archive__sticky">
+        <h2 class="archive__title" id="archivoTitle">Archivo<br>visual</h2>
+        <p class="archive__hint">Marca, fotografía y publicidad · toca una pieza</p>
+      </div>
+      <div class="archive__field">
+        <button class="arc arc--1" type="button" data-gallery="bisonmkt" data-speed="-0.18"><img src="assets/img/marketing/bison-antivuelco-black.webp" alt="Fotomontaje antivuelco Hamer Black para BISON FAMA" loading="lazy" decoding="async"></button>
+        <button class="arc arc--2" type="button" data-gallery="jhenscar" data-speed="0.12"><img src="assets/img/marketing/jhenscar-ofertas.webp" alt="Campaña de ofertas para Jhens Car" loading="lazy" decoding="async"></button>
+        <button class="arc arc--3" type="button" data-gallery="carryboy" data-speed="-0.08"><img src="assets/img/marketing/carryboy-s560.webp" alt="Fotomontaje cúpula Carryboy CMND-S560" loading="lazy" decoding="async"></button>
+        <button class="arc arc--4" type="button" data-gallery="bisonmkt" data-speed="0.2"><img src="assets/img/marketing/bison-catalogo-p1.webp" alt="Portada del catálogo de accesorios 4x4 de BISON FAMA" loading="lazy" decoding="async"></button>
+        <button class="arc arc--5" type="button" data-gallery="jhenscar" data-speed="-0.14"><img src="assets/img/marketing/jhenscar-antivuelco.webp" alt="Fotografía de producto antivuelco para Jhens Car" loading="lazy" decoding="async"></button>
+        <button class="arc arc--6" type="button" data-gallery="bisonmkt" data-speed="0.1"><img src="assets/img/marketing/bison-maxus-tienda.webp" alt="Fotografía en tienda BISON FAMA con Maxus" loading="lazy" decoding="async"></button>
+        <button class="arc arc--7" type="button" data-gallery="carryboy" data-speed="-0.2"><img src="assets/img/marketing/carryboy-mazda-bt50.webp" alt="Pieza para redes cúpula Mazda BT-50 para Carryboy" loading="lazy" decoding="async"></button>
+        <button class="arc arc--8" type="button" data-gallery="bisonmkt" data-speed="0.16"><img src="assets/img/marketing/bison-jac.webp" alt="Fotografía JAC con antivuelco y parrilla para BISON FAMA" loading="lazy" decoding="async"></button>
+        <button class="arc arc--9" type="button" data-gallery="jhenscar" data-speed="-0.1"><img src="assets/img/marketing/jhenscar-logo.webp" alt="Logotipo de Jhens Car" loading="lazy" decoding="async"></button>
+      </div>
+    </section>
+
+    <!-- MARCAS -->
+    <section class="brands" id="marketing">
+      <div class="work__head">
+        <h2 class="mega reveal">Marcas que<br>impulsé</h2>
+        <p class="work__lead reveal">Estrategia de marca y contenido comercial para empresas del sector automotriz en Lima: identidad visual, fotografía de producto, piezas publicitarias, catálogos y video.</p>
+      </div>
+
+      <article class="feature reveal">
+        <button class="feature__media" type="button" data-gallery="bisonmkt" aria-label="Ver piezas de marca de BISON FAMA">
+          <img src="assets/img/marketing/bison-portada.webp" alt="Portada de BISON FAMA para redes sociales" width="1200" height="675" loading="lazy" decoding="async">
+        </button>
+        <div class="feature__body">
+          <p class="proj__num">Destacado · Marca propia</p>
+          <h3>BISON FAMA</h3>
+          <p>Desarrollo integral de la marca desde cero: identidad visual, intro animada, catálogo comercial de 170 productos, material para punto de venta, fotografía de producto y piezas publicitarias para redes sociales y campañas de anuncios.</p>
+          <ul class="tags" aria-label="Qué hice"><li>Identidad visual</li><li>Catálogo</li><li>Animación</li><li>Fotografía</li><li>Material POP</li><li>Anuncios</li></ul>
+          <div class="proj__actions">
+            <button class="btn btn--primary btn--sm" type="button" data-gallery="bisonmkt">Ver trabajos</button>
+            <a class="btn btn--ghost btn--sm" href="assets/docs/catalogo-bison-fama.pdf" target="_blank" rel="noopener">Catálogo PDF <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+      </article>
+
+      <div class="brands__grid">
+        <article class="brand reveal">
+          <button class="brand__media" type="button" data-gallery="jhenscar" aria-label="Ver piezas gráficas de Jhens Car">
+            <img src="assets/img/marketing/jhenscar-banner.webp" alt="Banner publicitario de Jhens Car" width="1200" height="527" loading="lazy" decoding="async">
+          </button>
+          <h3>Importaciones Jhens Car</h3>
+          <p>Diseño del logotipo y gestión del marketing de la marca: fotografía de producto, fotomontajes publicitarios, campañas promocionales para redes sociales y producción de videos y reels.</p>
+          <div class="proj__actions">
+            <button class="btn btn--primary btn--sm" type="button" data-gallery="jhenscar">Ver trabajos</button>
+            <a class="btn btn--ghost btn--sm" href="https://www.facebook.com/jhenscarimport" target="_blank" rel="noopener">Facebook ↗</a>
+            <a class="btn btn--ghost btn--sm" href="https://www.youtube.com/@importacionesjhenscar2596" target="_blank" rel="noopener">YouTube ↗</a>
+          </div>
+        </article>
+        <article class="brand reveal">
+          <button class="brand__media" type="button" data-gallery="carryboy" aria-label="Ver piezas gráficas de Carryboy Perú">
+            <img src="assets/img/marketing/carryboy-mazda-cupula.webp" alt="Pieza publicitaria de cúpula Carryboy para Mazda" width="1200" height="800" loading="lazy" decoding="async">
+          </button>
+          <h3>Carryboy Perú</h3>
+          <p>Producción de piezas publicitarias para la línea de cúpulas: fotografía de vehículos, fotomontajes en escenarios de ruta y fichas técnicas que comunican los beneficios de cada modelo.</p>
+          <div class="proj__actions">
+            <button class="btn btn--primary btn--sm" type="button" data-gallery="carryboy">Ver trabajos</button>
+            <a class="btn btn--ghost btn--sm" href="https://www.facebook.com/carryboyperu1" target="_blank" rel="noopener">Facebook ↗</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="reels reveal">
+        <p class="reels__title">Producción audiovisual</p>
+        <ul class="reels__list">
+          <li><a href="https://www.facebook.com/reel/1278638249328425" target="_blank" rel="noopener">▶ Reel 1</a></li>
+          <li><a href="https://www.facebook.com/reel/3099316440367478" target="_blank" rel="noopener">▶ Reel 2</a></li>
+          <li><a href="https://www.facebook.com/reel/463187948569588" target="_blank" rel="noopener">▶ Reel 3</a></li>
+          <li><a href="https://www.facebook.com/reel/4404113409717592" target="_blank" rel="noopener">▶ Reel 4</a></li>
+          <li><a href="https://www.facebook.com/reel/359067902512223" target="_blank" rel="noopener">▶ Reel 5</a></li>
+          <li><a href="https://www.youtube.com/@importacionesjhenscar2596" target="_blank" rel="noopener">▶ YouTube Jhens Car</a></li>
+          <li><a href="https://www.behance.net/gustavohuamn" target="_blank" rel="noopener">Behance ↗</a></li>
         </ul>
       </div>
     </section>
 
     <!-- SOBRE MÍ -->
-    <section class="section" id="sobre-mi">
-      <div class="wrap about">
-        <figure class="about__photo reveal">
-          <img src="assets/img/perfil.jpg" alt="Gustavo Huamán (GOHUS), desarrollador de software y DJ en Lima" width="800" height="800" loading="lazy" decoding="async">
-        </figure>
-        <div class="about__text">
-          <p class="kicker reveal">Sobre mí</p>
-          <h2 class="reveal">Visión comercial, ejecución técnica</h2>
-          <p class="reveal">Cuento con 9 años de experiencia en ventas, marketing y diseño gráfico, y trabajo con Photoshop desde los 13 años. Esa trayectoria me dio una comprensión directa de lo que impulsa a un negocio: una experiencia de compra sin fricciones, equipos que operan con eficiencia e información confiable para tomar decisiones.</p>
-          <p class="reveal">Hoy integro esa visión con el desarrollo de software. Implementé la web corporativa y el sistema de control de asistencia de una empresa de seguridad privada, construí la marca y el canal digital de BISON FAMA, y desarrollé el sistema de almacén y ventas con el que la empresa opera a diario.</p>
-          <ul class="about__list reveal">
-            <li>Soluciones alineadas a objetivos comerciales, no solo técnicos.</li>
-            <li>Productos en operación, utilizados a diario por equipos reales.</li>
-            <li>Experiencia mobile-first, pensada para el cliente que compra desde el celular.</li>
-          </ul>
-          <p class="about__extra reveal">Fuera del ámbito profesional también soy <strong>GOHUS DJ</strong>: leer al público y sostener la energía es, en esencia, la misma habilidad que cerrar una venta.</p>
-        </div>
+    <section class="about" id="sobre-mi">
+      <figure class="about__photo reveal">
+        <img src="assets/img/perfil.jpg" alt="Retrato de Gustavo Huamán (GOHUS)" width="800" height="800" loading="lazy" decoding="async">
+      </figure>
+      <div class="about__text">
+        <h2 class="mega mega--left reveal">Visión comercial,<br>ejecución técnica</h2>
+        <p class="reveal">Cuento con 9 años de experiencia en ventas, marketing y diseño gráfico, y trabajo con Photoshop desde los 13 años. Esa trayectoria me dio una comprensión directa de lo que impulsa a un negocio: una experiencia de compra sin fricciones, equipos que operan con eficiencia e información confiable para tomar decisiones.</p>
+        <p class="reveal">Hoy integro esa visión con el desarrollo de software. Implementé la web corporativa y el sistema de control de asistencia de una empresa de seguridad privada, construí la marca y el canal digital de BISON FAMA, y desarrollé el sistema de almacén y ventas con el que la empresa opera a diario.</p>
+        <p class="about__dj reveal">Fuera del ámbito profesional también soy <strong>GOHUS DJ</strong>: leer al público y sostener la energía es, en esencia, la misma habilidad que cerrar una venta.</p>
       </div>
     </section>
 
-    <!-- PROYECTOS -->
-    <section class="section section--alt" id="proyectos">
-      <div class="wrap">
-        <p class="kicker reveal">Proyectos</p>
-        <h2 class="reveal">Trabajo en producción</h2>
-        <p class="section__lead reveal">Soluciones desarrolladas e implementadas para empresas en Lima, actualmente en operación.</p>
-
-        <div class="cards">
-          <article class="card reveal">
-            <button class="card__media" type="button" data-gallery="protection" aria-label="Ver capturas de Protection Police">
-              <img src="assets/img/proyectos/protection-police-web.webp" alt="Página web de Protection Police SAC" width="1280" height="800" loading="lazy" decoding="async">
-              <span class="card__badge">Web + App</span>
-            </button>
-            <div class="card__body">
-              <h3>Protection Police SAC</h3>
-              <p>Plataforma corporativa para una empresa de seguridad privada: sitio web orientado a la captación de clientes y sistema de control de asistencia con verificación por selfie y GPS. La gerencia supervisa la cobertura de cada puesto en tiempo real y reduce el riesgo de puestos descubiertos.</p>
-              <ul class="tags" aria-label="Tecnologías">
-                <li>PHP 8</li><li>MariaDB</li><li>JavaScript</li><li>PWA</li><li>HTML/CSS</li><li>SEO</li>
-              </ul>
-              <div class="card__actions">
-                <a class="btn btn--primary btn--sm" href="https://protectionpolice.com/" target="_blank" rel="noopener">Ver proyecto <span aria-hidden="true">↗</span></a>
-                <button class="btn btn--ghost btn--sm" type="button" data-gallery="protection">Ver la app</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <button class="card__media" type="button" data-gallery="bisonweb" aria-label="Ver capturas de BISON FAMA">
-              <img src="assets/img/proyectos/bison-fama-web.webp" alt="Página web de BISON FAMA" width="1280" height="800" loading="lazy" decoding="async">
-              <span class="card__badge">Marca + Web</span>
-            </button>
-            <div class="card__body">
-              <h3>BISON FAMA</h3>
-              <p>Identidad de marca y canal de venta digital para una empresa de accesorios aftermarket para pickups y SUVs: tienda web organizada por categorías, posicionamiento en buscadores y atención comercial directa por WhatsApp.</p>
-              <ul class="tags" aria-label="Tecnologías">
-                <li>HTML/CSS</li><li>JavaScript</li><li>SEO local</li><li>Branding</li><li>Photoshop</li><li>Illustrator</li>
-              </ul>
-              <div class="card__actions">
-                <a class="btn btn--primary btn--sm" href="https://bisonfama.com/" target="_blank" rel="noopener">Ver proyecto <span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <button class="card__media" type="button" data-gallery="bisonsistema" aria-label="Ver capturas del sistema de inventario BISON">
-              <img src="assets/img/proyectos/bison-inventario-panel.webp" alt="Panel del sistema de almacén y ventas BISON FAMA" width="1280" height="800" loading="lazy" decoding="async">
-              <span class="card__badge">Sistema interno</span>
-            </button>
-            <div class="card__body">
-              <h3>Sistema de inventario BISON</h3>
-              <p>Sistema de gestión de almacén y ventas que centraliza inventario, ventas, proformas, clientes, envíos y cierre de caja. Incluye control de acceso por roles, alertas de reposición de stock y funciona como app instalable en el celular.</p>
-              <ul class="tags" aria-label="Tecnologías">
-                <li>React</li><li>PHP</li><li>MySQL</li><li>PWA</li><li>JavaScript</li>
-              </ul>
-              <div class="card__actions">
-                <button class="btn btn--primary btn--sm" type="button" data-gallery="bisonsistema">Ver proyecto</button>
-              </div>
-              <p class="card__note">Sistema privado: las capturas usan datos ficticios.</p>
-            </div>
-          </article>
+    <!-- HERRAMIENTAS -->
+    <section class="toolkit" id="habilidades">
+      <h2 class="mega reveal">Mi caja de<br>herramientas</h2>
+      <div class="toolkit__rows">
+        <div class="toolkit__row reveal">
+          <h3>Desarrollo</h3>
+          <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>PHP</li><li>MySQL / MariaDB</li><li>PWA</li><li>Apps Android</li><li>VS Code</li><li>Git y GitHub</li><li>Diseño responsive</li></ul>
         </div>
-
-        <div class="mkt">
-          <h3 class="mkt__title reveal">Marketing, marca y contenido comercial</h3>
-          <p class="mkt__lead reveal">Desarrollo la estrategia de marca y el contenido comercial de empresas del sector automotriz en Lima: identidad visual, fotografía de producto, piezas publicitarias, catálogos y producción de video.</p>
-          <article class="card card--feature reveal">
-            <button class="card__media" type="button" data-gallery="bisonmkt" aria-label="Ver piezas de marca de BISON FAMA">
-              <img src="assets/img/marketing/bison-portada.webp" alt="Portada de BISON FAMA para redes sociales" width="1200" height="675" loading="lazy" decoding="async">
-              <span class="card__badge">Marca propia · 14 piezas</span>
-            </button>
-            <div class="card__body">
-              <p class="kicker">Destacado</p>
-              <h3>BISON FAMA · Marca y marketing</h3>
-              <p>Desarrollo integral de la marca desde cero: identidad visual, intro animada, catálogo comercial de 170 productos, material para punto de venta, fotografía de producto y piezas publicitarias para redes sociales y campañas de anuncios.</p>
-              <ul class="tags" aria-label="Qué hice">
-                <li>Identidad visual</li><li>Catálogo</li><li>Animación</li><li>Fotografía</li><li>Fotomontaje</li><li>Material POP</li><li>Anuncios</li>
-              </ul>
-              <div class="card__actions">
-                <button class="btn btn--primary btn--sm" type="button" data-gallery="bisonmkt">Ver trabajos</button>
-                <a class="btn btn--ghost btn--sm" href="assets/docs/catalogo-bison-fama.pdf" target="_blank" rel="noopener">Catálogo PDF <span aria-hidden="true">↓</span></a>
-                <a class="btn btn--ghost btn--sm" href="https://bisonfama.com/" target="_blank" rel="noopener">bisonfama.com <span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </article>
-
-          <div class="mkt__grid">
-            <article class="card reveal">
-              <button class="card__media" type="button" data-gallery="jhenscar" aria-label="Ver piezas gráficas de Jhens Car">
-                <img src="assets/img/marketing/jhenscar-banner.webp" alt="Banner publicitario de Jhens Car" width="1200" height="527" loading="lazy" decoding="async">
-                <span class="card__badge">6 piezas</span>
-              </button>
-              <div class="card__body">
-                <h3>Importaciones Jhens Car</h3>
-                <p>Diseño del logotipo y gestión del marketing de la marca: fotografía de producto, fotomontajes publicitarios, campañas promocionales para redes sociales y producción de videos y reels.</p>
-                <ul class="tags" aria-label="Qué hice">
-                  <li>Logo</li><li>Fotografía</li><li>Fotomontaje</li><li>Video</li><li>Redes sociales</li>
-                </ul>
-                <div class="card__actions">
-                  <button class="btn btn--primary btn--sm" type="button" data-gallery="jhenscar">Ver trabajos</button>
-                  <a class="btn btn--ghost btn--sm" href="https://www.facebook.com/jhenscarimport" target="_blank" rel="noopener">Facebook <span aria-hidden="true">↗</span></a>
-                  <a class="btn btn--ghost btn--sm" href="https://www.youtube.com/@importacionesjhenscar2596" target="_blank" rel="noopener">YouTube <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-            </article>
-            <article class="card reveal">
-              <button class="card__media" type="button" data-gallery="carryboy" aria-label="Ver piezas gráficas de Carryboy Perú">
-                <img src="assets/img/marketing/carryboy-mazda-cupula.webp" alt="Pieza publicitaria de cúpula Carryboy para Mazda" width="1200" height="800" loading="lazy" decoding="async">
-                <span class="card__badge">4 piezas</span>
-              </button>
-              <div class="card__body">
-                <h3>Carryboy Perú</h3>
-                <p>Producción de piezas publicitarias para la línea de cúpulas: fotografía de vehículos, fotomontajes en escenarios de ruta y fichas técnicas que comunican los beneficios de cada modelo.</p>
-                <ul class="tags" aria-label="Qué hice">
-                  <li>Fotografía</li><li>Fotomontaje</li><li>Diseño de catálogo</li><li>Redes sociales</li>
-                </ul>
-                <div class="card__actions">
-                  <button class="btn btn--primary btn--sm" type="button" data-gallery="carryboy">Ver trabajos</button>
-                  <a class="btn btn--ghost btn--sm" href="https://www.facebook.com/carryboyperu1" target="_blank" rel="noopener">Facebook <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-            </article>
-            <a class="mkt__item mkt__item--behance reveal" href="https://www.behance.net/gustavohuamn" target="_blank" rel="noopener">
-              <span class="mkt__tag">Portafolio de diseño</span>
-              <strong>Mis diseños en Behance</strong>
-              <span class="mkt__desc">Portafolio de identidad visual, flyers, banners y piezas para redes desarrolladas en Photoshop e Illustrator.</span>
-              <span class="mkt__link">Ver Behance <span aria-hidden="true">↗</span></span>
-            </a>
-          </div>
-
-          <div class="videos reveal">
-            <h4>Producción audiovisual: videos y reels</h4>
-            <ul class="videos__list">
-              <li><a href="https://www.facebook.com/reel/1278638249328425" target="_blank" rel="noopener">▶ Reel 1</a></li>
-              <li><a href="https://www.facebook.com/reel/3099316440367478" target="_blank" rel="noopener">▶ Reel 2</a></li>
-              <li><a href="https://www.facebook.com/reel/463187948569588" target="_blank" rel="noopener">▶ Reel 3</a></li>
-              <li><a href="https://www.facebook.com/reel/4404113409717592" target="_blank" rel="noopener">▶ Reel 4</a></li>
-              <li><a href="https://www.facebook.com/reel/359067902512223" target="_blank" rel="noopener">▶ Reel 5</a></li>
-              <li><a href="https://www.youtube.com/@importacionesjhenscar2596" target="_blank" rel="noopener">▶ Canal de YouTube de Jhens Car</a></li>
-            </ul>
-          </div>
+        <div class="toolkit__row reveal">
+          <h3>Diseño y contenido</h3>
+          <ul class="chips"><li>Photoshop · desde los 13</li><li>Illustrator</li><li>Diseño de logos</li><li>Branding</li><li>Fotografía</li><li>Fotomontaje</li><li>Edición de video</li><li>Piezas para redes</li></ul>
         </div>
-      </div>
-    </section>
-
-    <!-- HABILIDADES -->
-    <section class="section" id="habilidades">
-      <div class="wrap">
-        <p class="kicker reveal">Habilidades</p>
-        <h2 class="reveal">Tecnología, negocio y creatividad</h2>
-        <div class="skills">
-          <div class="skills__group reveal">
-            <h3>Desarrollo</h3>
-            <ul class="chips">
-              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>PHP</li><li>MySQL / MariaDB</li><li>PWA</li><li>Apps Android</li><li>VS Code</li><li>Git y GitHub</li><li>Diseño responsive</li>
-            </ul>
-          </div>
-          <div class="skills__group reveal">
-            <h3>Negocio</h3>
-            <ul class="chips">
-              <li>Ventas consultivas</li><li>Marketing digital</li><li>SEO local</li><li>Atención por WhatsApp</li>
-            </ul>
-          </div>
-          <div class="skills__group reveal">
-            <h3>Diseño y creatividad</h3>
-            <ul class="chips">
-              <li>Diseño gráfico</li><li>Diseño de logos</li><li>Branding</li><li>Photoshop (desde los 13)</li><li>Illustrator</li><li>Fotografía</li><li>Fotomontaje</li><li>Grabación y edición de video</li><li>Piezas para redes</li><li>DJ</li>
-            </ul>
-          </div>
+        <div class="toolkit__row reveal">
+          <h3>Negocio</h3>
+          <ul class="chips"><li>Ventas consultivas</li><li>Marketing digital</li><li>SEO local</li><li>Campañas de anuncios</li><li>Atención por WhatsApp</li><li>DJ</li></ul>
         </div>
       </div>
     </section>
 
     <!-- CONTACTO -->
-    <section class="section section--alt" id="contacto">
-      <div class="wrap contact">
-        <p class="kicker reveal">Contacto</p>
-        <h2 class="reveal">¿Listo para hacer crecer tu negocio?</h2>
-        <p class="section__lead reveal">Conversemos sobre tu proyecto. Respondo con mayor rapidez por WhatsApp.</p>
-        <div class="contact__grid">
-          <a class="contact__item reveal" href="https://wa.me/51981119605?text=Hola%20Gustavo%2C%20vi%20tu%20portafolio%20y%20quiero%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
-            <span><strong>WhatsApp</strong><small>+51 981 119 605</small></span>
-          </a>
-          <a class="contact__item reveal" href="mailto:gustavohs353@gmail.com">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-mail"/></svg>
-            <span><strong>Email</strong><small>gustavohs353<wbr>@gmail.com</small></span>
-          </a>
-          <a class="contact__item reveal" href="https://www.linkedin.com/in/gustavo-huam%C3%A1n-s%C3%A1nchez-091431200/" target="_blank" rel="noopener">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-in"/></svg>
-            <span><strong>LinkedIn</strong><small>Gustavo Huamán Sánchez</small></span>
-          </a>
-          <a class="contact__item reveal" href="https://github.com/gohushs" target="_blank" rel="noopener">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-gh"/></svg>
-            <span><strong>GitHub</strong><small>@gohushs</small></span>
-          </a>
-          <a class="contact__item reveal" href="https://www.behance.net/gustavohuamn" target="_blank" rel="noopener">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-be"/></svg>
-            <span><strong>Behance</strong><small>gustavohuamn</small></span>
-          </a>
-        </div>
+    <section class="contact" id="contacto">
+      <p class="contact__kicker reveal">¿Listo para hacer crecer tu negocio?</p>
+      <h2 class="contact__big reveal"><a href="https://wa.me/51981119605?text=Hola%20Gustavo%2C%20vi%20tu%20portafolio%20y%20quiero%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener">Hablemos <span aria-hidden="true">↗</span></a></h2>
+      <div class="contact__grid">
+        <a class="contact__item reveal" href="https://wa.me/51981119605?text=Hola%20Gustavo%2C%20vi%20tu%20portafolio%20y%20quiero%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+          <span><strong>WhatsApp</strong><small>+51 981 119 605</small></span>
+        </a>
+        <a class="contact__item reveal" href="mailto:gustavohs353@gmail.com">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-mail"/></svg>
+          <span><strong>Email</strong><small>gustavohs353<wbr>@gmail.com</small></span>
+        </a>
+        <a class="contact__item reveal" href="https://www.linkedin.com/in/gustavo-huam%C3%A1n-s%C3%A1nchez-091431200/" target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-in"/></svg>
+          <span><strong>LinkedIn</strong><small>Gustavo Huamán Sánchez</small></span>
+        </a>
+        <a class="contact__item reveal" href="https://github.com/gohushs" target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-gh"/></svg>
+          <span><strong>GitHub</strong><small>@gohushs</small></span>
+        </a>
+        <a class="contact__item reveal" href="https://www.behance.net/gustavohuamn" target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-be"/></svg>
+          <span><strong>Behance</strong><small>gustavohuamn</small></span>
+        </a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="wrap footer__in">
-      <p>© <span id="year">2026</span> Gustavo Huamán (GOHUS · gohushs) · Lima, Perú</p>
-      <a href="#inicio">Volver arriba ↑</a>
-    </div>
+    <p>© <span id="year">2026</span> Gustavo Huamán (GOHUS · gohushs) · Lima, Perú</p>
+    <a href="#inicio">Volver arriba ↑</a>
   </footer>
 
-  <!-- Botón flotante de WhatsApp -->
   <a class="wa-float" href="https://wa.me/51981119605?text=Hola%20Gustavo%2C%20vi%20tu%20portafolio%20y%20quiero%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
     <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
   </a>
 
-  <!-- Galería de capturas -->
   <dialog class="gallery" id="gallery" aria-labelledby="galleryTitle">
     <div class="gallery__head">
       <h3 id="galleryTitle">Capturas</h3>

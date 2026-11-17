@@ -119,7 +119,11 @@ const step = (d) => { index = (index + d + current.items.length) % current.items
 document.querySelectorAll('[data-gallery]').forEach((btn) => {
   btn.addEventListener('click', () => {
     current = galleries[btn.dataset.gallery];
-    index = 0;
+    // Si se tocó una pieza del archivo visual, abrir la galería en esa misma imagen
+    const img = btn.querySelector('img');
+    const name = img && btn.classList.contains('arc') ? img.getAttribute('src').split('/').pop() : '';
+    const found = name ? current.items.findIndex(([f]) => f.endsWith(name)) : -1;
+    index = found > -1 ? found : 0;
     gTitle.textContent = current.title;
     render();
     dlg.showModal();
@@ -176,3 +180,30 @@ galleries.bisonmkt = {
     [M + 'bison-jac.webp', 'Fotografía y edición: JAC con antivuelco y parrilla'],
   ],
 };
+
+// Parallax: nombre gigante del inicio y piezas flotantes del archivo visual
+const desktop = window.matchMedia('(min-width: 960px)');
+const calm = window.matchMedia('(prefers-reduced-motion: reduce)');
+const giant = document.querySelector('[data-parallax]');
+const archive = document.querySelector('.archive');
+const pieces = [...document.querySelectorAll('.arc[data-speed]')];
+let ticking = false;
+
+const paint = () => {
+  ticking = false;
+  if (calm.matches) return;
+  const y = window.scrollY;
+  if (giant) giant.style.transform = `translateY(${y * parseFloat(giant.dataset.parallax)}px)`;
+  if (!desktop.matches || !archive) {
+    pieces.forEach((p) => { p.style.transform = ''; });
+    return;
+  }
+  const r = archive.getBoundingClientRect();
+  if (r.bottom < 0 || r.top > window.innerHeight) return;
+  const progress = -r.top; // px recorridos dentro de la sección
+  pieces.forEach((p) => { p.style.transform = `translateY(${progress * parseFloat(p.dataset.speed)}px)`; });
+};
+const requestPaint = () => { if (!ticking) { ticking = true; requestAnimationFrame(paint); } };
+window.addEventListener('scroll', requestPaint, { passive: true });
+window.addEventListener('resize', requestPaint);
+paint();
