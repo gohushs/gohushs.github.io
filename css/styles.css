@@ -326,3 +326,11 @@ button { font: inherit; color: inherit; }
   .svc__art { aspect-ratio: 4 / 3; }
   .svc__art svg { width: 26%; }
 }
+
+/* Foto recortada del inicio: se funde con el fondo por abajo */
+.hero__img {
+  -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 100%), linear-gradient(to right, transparent 0, #000 16%, #000 84%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to bottom, #000 70%, transparent 100%), linear-gradient(to right, transparent 0, #000 16%, #000 84%, transparent 100%);
+  mask-composite: intersect;
+}
